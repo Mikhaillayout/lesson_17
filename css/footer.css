@@ -1,0 +1,255 @@
+/* ==================== Подвал === (Подробнее) === Начало === 2022-11 ==================== */
+.footer {
+  background: #1e212c;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 80px;
+  row-gap: 20px;
+}
+.footer__social {
+  flex: 0 1 280px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.footer__logo {
+  margin: 0px 0px 24px 0px;
+  line-height: 0;
+}
+.footer__text {
+  flex: 1 1 33%;
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.6;
+  color: #ffffff;
+}
+.footer__icon-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  column-gap: 26px;
+}
+.footer__icon-link {
+  color: white;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.footer__icon-link:nth-child(1):before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: url("../img/footer/facebook.svg") 50% 50% no-repeat;
+}
+.footer__icon-link:nth-child(2):before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: url("../img/footer/Twitter.svg") 50% 50% no-repeat;
+}
+.footer__icon-link:nth-child(3):before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: url("../img/footer/YouTube.svg") 50% 50% no-repeat;
+}
+.footer__icon-link:nth-child(4):before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: url("../img/footer/telegram.svg") 50% 50% no-repeat;
+}
+.footer__icon-link:nth-child(5):before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: url("../img/footer/Instagram.svg") 50% 50% no-repeat;
+}
+.footer__icon-link:nth-child(6):before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: url("../img/footer/Linked-In.svg") 50% 50% no-repeat;
+}
+.footer__site-map {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.footer__title {
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0px 0px 12px 0px;
+  color: #ffffff;
+}
+.footer__link {
+  line-height: 1.6;
+  color: rgb(255, 255, 255, 0.6);
+}
+.footer__courses {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.footer__contact {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.footer__sign {
+  flex: 0 1 280px;
+  display: flex;
+  flex-direction: column;
+  color: rgb(255, 255, 255, 0.6);
+  row-gap: 12px;
+}
+.footer__sign p {
+  font-size: 10px;
+}
+
+.footer__form {
+  flex: 0 1 36px;
+  max-width: 286px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.form-footer {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 10px 12px;
+}
+.form-footer__line {
+  flex: 1 1 auto;
+}
+.form-footer__input {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.002);
+}
+.form-footer__input::placeholder {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #ffffff;
+  opacity: 0.6;
+}
+.form-footer__label {
+}
+.form-footer__button {
+  flex: 0 1 16px;
+  height: 16px;
+  background: url("../img/footer/arrow.svg") 50% no-repeat;
+}
+
+@media (max-width: 1235px) {
+  .footer__container {
+    column-gap: 50px;
+  }
+}
+@media (max-width: 1115px) {
+  .footer__container {
+    column-gap: 30px;
+  }
+}
+@media (max-width: 1032px) {
+  .footer__container {
+    column-gap: 10px;
+  }
+}
+@media (max-width: 955px) {
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .footer__social {
+    order: 1;
+    flex-direction: row;
+    align-items: center;
+    flex: 0 1 auto;
+    column-gap: 10px;
+  }
+  .footer__logo {
+    margin: 0px 0px 0px 0px;
+  }
+}
+@media (max-width: 700px) {
+  .footer__container > *:not(:first-child) {
+    flex: 1 1 40%;
+  }
+  .footer__text {
+    flex: 0 1 auto;
+  }
+  .footer__social {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .footer__logo {
+    order: 1;
+  }
+}
+@media (max-width: 400px) {
+  .footer__container > *:not(:first-child) {
+    flex: 1 1 90%;
+    align-items: center;
+  }
+  .footer__title {
+    margin: 0px 0px 0px 0px;
+  }
+}
+/* ==================== Подвал === (Подробнее) === Конец === 2022-11 ==================== */
+
+/* ==================== Copyright === (Подробнее) === Начало === 2022-11 ==================== */
+.copyright {
+  background: #292c37;
+}
+.copyright__container {
+  max-width: 1230px;
+  min-height: 52px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 10px;
+  color: white;
+  gap: 15px;
+}
+.copyright__container span::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url("../img/footer/Heart.svg") 0 0 / cover no-repeat;
+  margin: 0 3px;
+}
+.copyright__made {
+  flex: 1 1 288px;
+}
+.copyright__go-to-top {
+  text-transform: uppercase;
+}
+/* ==================== Copyright === (Подробнее) === Конец=== 2022-11 ==================== */

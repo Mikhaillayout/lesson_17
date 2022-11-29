@@ -1,0 +1,769 @@
+/* ==================== Подключение стилей === (Подробнее) === Начало === 2022-11 ==================== */
+@import "reset.css";
+@import "header.css";
+@import "common.css";
+@import "blog.css";
+@import "subscribe.css";
+@import "footer.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+/* ==================== Подключение стилей === (Подробнее) === Конец === 2022-11 ==================== */
+@keyframes circle {
+  100% {
+    transform: scale(1.2);
+  }
+  0% {
+    opacity: 0.3;
+  }
+}
+
+/* ==================== Глобал === (Глобальные настройки) === Начало === 2022-11 ==================== */
+body {
+  font-family: "Lato";
+}
+[class*="page1"] {
+  margin: 0px 0px 180px 0px;
+}
+.page1.page1_none {
+  margin: 0px 0px 0px 0px;
+}
+[class*="__container"] {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (max-width: 935px) {
+  [class*="page1"] {
+    margin: 0px 0px 80px 0px;
+  }
+}
+@media (max-width: 580px) {
+  [class*="page1"] {
+    margin: 0px 0px 50px 0px;
+  }
+}
+/* ==================== Глобал === (Глобальные настройки) === Конец === 2022-11 ==================== */
+
+/* ==================== Первая секция === (main) === Начало === 2022-11 ==================== */
+.main {
+  background: linear-gradient(55.95deg, rgba(255, 64, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%);
+}
+.main__container {
+  padding-top: 200px;
+  padding-bottom: 80px;
+}
+.main__content {
+  display: flex;
+  margin: 0px 0px 200px 0px;
+}
+.main__title {
+  flex: 0 1 50%;
+}
+.main__title > *:last-child {
+  margin: 0px 0px 0px 0px;
+}
+.main__img {
+  flex: 0 1 50%;
+  position: relative;
+  transform: translate(8%, 0px);
+}
+.main__img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("../img/page1/1main/illustration_02.svg") 0 0 / 100% auto no-repeat;
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.main__img:hover::before {
+  opacity: 1;
+}
+.main__img img {
+  width: 100%;
+}
+.main__stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.title-main {
+}
+.title-main a {
+}
+.title-main__subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1e212c;
+  margin: 0px 0px 24px 0px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  column-gap: 16px;
+}
+.title-main__subtitle::before {
+  content: "";
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #ff3f3a url("../img/page1/1main/Polygon.svg") 55% no-repeat;
+}
+.title-main__subtitle::after {
+  content: "";
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: rgba(255, 64, 58, 0.12);
+  order: -1;
+  position: absolute;
+  left: -16px;
+  animation: circle 0.8s infinite alternate;
+}
+
+.title-main__subtitle:hover::after {
+  animation-play-state: paused;
+}
+.title-main__title {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  color: #1e212c;
+  max-width: 496px;
+  margin: 0px 0px 60px 0px;
+}
+.title-main__button > *:not(:last-child) {
+  margin: 0px 24px 0px 0px;
+}
+
+.stats {
+  color: #1e212c;
+}
+.stats__items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 12px;
+}
+.stats__number {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 1.3;
+}
+.stats__title {
+  line-height: 1.6;
+}
+.stats__separator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ff3f3a;
+}
+
+@media (max-width: 935px) {
+  .main__container {
+    padding: 100px 15px 15px 15px;
+  }
+  .main__content {
+    justify-content: center;
+    margin: 0px 0px 60px 0px;
+  }
+  .main__title {
+    flex: 0 1 auto;
+  }
+  .main__img {
+    display: none;
+  }
+  .title-main__title {
+    max-width: 650px;
+  }
+  .main__stats {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  .stats__items {
+    flex: 0 1 50%;
+    justify-content: space-evenly;
+    column-gap: 2%;
+  }
+  .stats__separator {
+    display: none;
+  }
+}
+@media (max-width: 715px) {
+  .main__container {
+    padding-top: 160px;
+  }
+  .main__content {
+    margin: 0px 0px 30px 0px;
+  }
+  .title-main__title {
+    margin: 0px 0px 30px 0px;
+  }
+  .title-main__button {
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 2%;
+  }
+  .title-main__button > *:not(:last-child) {
+    margin: 0px 0px 0px 0px;
+  }
+}
+@media (max-width: 580px) {
+  .main__title {
+    display: flex;
+    flex-direction: column;
+  }
+  .title-main__title {
+    font-size: 46px;
+    text-align: center;
+    order: -1;
+  }
+  .title-main__subtitle {
+    align-self: center;
+    margin: 0px 0px 50px 0px;
+    column-gap: 30px;
+  }
+  .main__stats {
+    display: block;
+  }
+  .stats__items {
+    justify-content: center;
+    column-gap: 10px;
+  }
+}
+/* ==================== Первая секция === (main) === Конец === 2022-11 ==================== */
+
+/* ==================== Вторая секция === (who-we-are) === Начало === 2022-11 ==================== */
+.who-we-are {
+}
+.who-we-are__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.who-we-are__img {
+  flex: 0 1 50%;
+}
+.who-we-are__img img {
+  max-width: 100%;
+}
+.who-we-are__why {
+  flex: 0 1 50%;
+  padding-left: 10.97%;
+  padding-bottom: 42px;
+}
+.who-we-are__why > *:last-child {
+  margin: 0px 0px 0px 0px;
+}
+.who-we-are__header {
+  margin: 0px 0px 40px 0px;
+}
+.who-we-are__list {
+  flex: 1 1 auto;
+  margin: 0px 0px 22px 0px;
+}
+.who-we-are__button {
+  margin: 0px 0px 22px 0px;
+}
+
+@media (max-width: 715px) {
+  .who-we-are__container {
+    display: block;
+  }
+  .who-we-are__container > *:not(:last-child) {
+    margin: 0px 0px 20px 0px;
+  }
+  .who-we-are__why {
+    padding: 0px 0px 0px 0px;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  .who-we-are__header {
+    margin: 0px 0px 30px 0px;
+  }
+}
+@media (max-width: 400px) {
+  .who-we-are__img {
+    display: none;
+  }
+  .who-we-are__header {
+    margin: 0px 0px 20px 0px;
+  }
+}
+/* ==================== Вторая секция === (who-we-are) === Конец === 2022-11 ==================== */
+
+/* ==================== Третья секция === (to-learn) === Начало === 2022-11 ==================== */
+.to-learn {
+}
+.to-learn__container {
+}
+.to-learn__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin: 0px 0px 60px 0px;
+  row-gap: 8px;
+}
+.to-learn__header {
+  flex: 1 1 auto;
+}
+.to-learn__button {
+}
+.to-learn__carts {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  margin: 0 -15px;
+}
+
+@media (max-width: 1115px) {
+  .to-learn__top {
+    margin: 0px 0px 30px 0px;
+  }
+  .to-learn__carts {
+    justify-content: center;
+    row-gap: 15px;
+  }
+}
+/* ==================== Третья секция === (to-learn) === Конец === 2022-11 ==================== */
+
+/* ==================== Четвертая секция === (benefits) === Начало === 2022-11 ==================== */
+.benefits {
+}
+.benefits__container {
+}
+.benefits__header {
+  margin: 0px 0px 60px 0px;
+}
+.benefits__stages {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0px 0px 60px 0px;
+  row-gap: 5px;
+}
+.benefits__stage {
+  flex: 1 1 25%;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #9a9ca5;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease 0s;
+}
+.benefits__stage_stars::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url("../img/page1/4our-benefits/Star.svg") 0 0 no-repeat;
+  transition: all 0.3s ease 0s;
+}
+.benefits__stage_shape::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url("../img/page1/4our-benefits/shape.svg") 0 0 no-repeat;
+  transition: all 0.3s ease 0s;
+}
+.benefits__stage_vector::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url("../img/page1/4our-benefits/Vector.svg") 0 0 no-repeat;
+  transition: all 0.3s ease 0s;
+}
+.benefits__stage_vextor2::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url("../img/page1/4our-benefits/Vector-1.svg") 0 0 no-repeat;
+  transition: all 0.3s ease 0s;
+}
+.benefits__stage:hover {
+  border: 1px solid #ff3f3a;
+  border-radius: 4px;
+  color: #ff3f3a;
+}
+.benefits__stage_stars:hover::before {
+  background: url("../img/page1/4our-benefits/Star_02.svg") 0 0 no-repeat;
+}
+.benefits__stage_shape:hover::before {
+  background: url("../img/page1/4our-benefits/shape_02.svg") 0 0 no-repeat;
+}
+.benefits__stage_vector:hover::before {
+  background: url("../img/page1/4our-benefits/Vector_02.svg") 0 0 no-repeat;
+}
+.benefits__stage_vextor2:hover::before {
+  background: url("../img/page1/4our-benefits/Vector-1_02.svg") 0 0 no-repeat;
+}
+.benefits__info {
+  display: flex;
+}
+.benefits__deteils {
+  flex: 1 0 50%;
+  padding-right: 11%;
+}
+.benefits__title {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 1.3;
+  color: #1e212c;
+  margin: 0px 0px 24px 0px;
+}
+.benefits__text {
+  line-height: 1.6;
+  color: #424551;
+}
+.benefits__img {
+  flex: 1 1 50%;
+}
+.benefits__img img {
+  max-width: 100%;
+}
+
+@media (max-width: 820px) {
+  .benefits__stage {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 715px) {
+  .benefits__stages,
+  .benefits__header {
+    margin: 0px 0px 30px 0px;
+  }
+
+  .benefits__info {
+    display: block;
+  }
+  .benefits__img {
+    text-align: center;
+  }
+}
+@media (max-width: 400px) {
+  .benefits__stages,
+  .benefits__header {
+    margin: 0px 0px 20px 0px;
+  }
+  .benefits__stage {
+    flex: 0 1 100%;
+  }
+}
+/* ==================== Четвертая секция === (benefits) === Конец === 2022-11 ==================== */
+
+/* ==================== Пятая секция === (events) === Начало === 2022-11 ==================== */
+.events {
+  padding: 80px 0px 80px 0px;
+  background: linear-gradient(55.95deg, rgba(255, 64, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%);
+}
+.events__container {
+}
+.events__header {
+  margin: 0px 0px 60px 0px;
+}
+.events__carts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  margin: 0px 0px 60px 0px;
+}
+
+.events__more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 40px;
+}
+.more-events {
+}
+.more-events__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.5;
+  color: #1e212c;
+}
+
+@media (max-width: 715px) {
+  .events {
+    padding: 15px 0px 15px 0px;
+  }
+  .events__header,
+  .events__carts {
+    margin: 0px 0px 30px 0px;
+  }
+}
+/* ==================== Пятая секция === (events) === Конец === 2022-11 ==================== */
+
+/* ==================== Шестая секция === (sertificate) === Начало === 2022-11 ==================== */
+.certificate {
+}
+.certificate__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.certificate__info {
+  flex: 0 1 32.27%;
+}
+.certificate__header {
+  margin: 0px 0px 48px 0px;
+}
+.certificate__text {
+  line-height: 1.6;
+  color: #424551;
+  margin: 0px 0px 32px 0px;
+}
+.certificate__emblems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.emblems-certificate {
+}
+.emblems-certificate__item {
+}
+.certificate__img {
+  flex: 1 1 57.31%;
+  padding-left: 10.56%;
+}
+.certificate__img img {
+  margin-bottom: -46px;
+  max-width: 100%;
+}
+
+@media (max-width: 935px) {
+  .certificate__container {
+    display: block;
+    text-align: center;
+  }
+  .certificate__info {
+    margin: 0px 0px 20px 0px;
+  }
+  .certificate__emblems {
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 400px) {
+  .certificate__emblems {
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .certificate__header,
+  .certificate__text {
+    margin: 0px 0px 15px 0px;
+  }
+}
+/* ==================== Шестая секция === (certificate) === Конец === 2022-11 ==================== */
+
+/* ==================== Седьмая секция === (team) === Начало === 2022-11 ==================== */
+
+.team {
+  padding: 166px 0px 180px 0px;
+  background-color: #f4f5f7;
+}
+.team__container {
+}
+.team__top {
+  display: flex;
+  align-items: flex-end;
+  margin: 0px 0px 60px 0px;
+}
+.team__hader {
+  flex: 1 1 auto;
+}
+.team__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.team__carts {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  justify-content: space-around;
+  row-gap: 30px;
+}
+
+.carts-team {
+}
+.carts-team__item {
+  padding: 0 15px;
+  flex: 0 1 25%;
+}
+.carts-team__body {
+}
+.carts-team__img {
+  max-height: 340px;
+  border-radius: 4px;
+  position: relative;
+  margin: 0px 0px 16px 0px;
+}
+.carts-team__img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(30, 33, 44, 0) 43.9%,
+    rgba(30, 33, 44, 0.03) 55.21%,
+    rgba(30, 33, 44, 0.33) 68.73%,
+    rgba(30, 33, 44, 0.56) 76.17%,
+    rgba(30, 33, 44, 0.768225) 83.75%,
+    rgba(30, 33, 44, 0.92) 91.49%,
+    #1e212c 100%
+  );
+  opacity: 0;
+  transition: all 0.5s ease 0s;
+}
+.carts-team__img:hover .carts-team__icon-link,
+.carts-team__img:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+.carts-team__img img {
+  min-width: 285px;
+  max-height: 340px;
+}
+.carts-team__icon-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 24px;
+  position: absolute;
+  bottom: 5%;
+  left: 65%;
+}
+.carts-team__icon-link {
+  width: 24px;
+  height: 24px;
+}
+.carts-team__icon-link:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url("../img/footer/facebook.svg") 50% 50% no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+}
+.carts-team__icon-link:nth-child(2) {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url("../img/footer/Instagram.svg") 50% 50% no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+}
+.carts-team__icon-link:nth-child(3) {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url("../img/footer/Linked-In.svg") 60% 50% no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+}
+.carts-team__name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #424551;
+  text-align: center;
+}
+.carts-team__profession {
+  line-height: 1.6;
+  color: #787a80;
+  text-align: center;
+}
+
+@media (max-width: 935px) {
+  .team {
+    padding: 100px 0px 80px 0px;
+  }
+}
+@media (max-width: 715px) {
+  .team {
+    padding: 100px 0px 80px 0px;
+  }
+}
+/* ==================== Седьмая секция === (team) === Конец === 2022-11 ==================== */
+
+/* ==================== Восьмая секция === (testimonials) === Начало === 2022-11 ==================== */
+.testimonials {
+}
+.testimonials {
+  background: #f4f5f7;
+}
+.testimonials__container {
+  padding: 0px 105px 160px;
+}
+.testimonials__header {
+  margin: 0px 0px 60px 0px;
+}
+.testimonials__example {
+  padding: 64px 105px;
+  background: #ffffff;
+  box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  border-radius: 4px;
+}
+.testimonials__text {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #424551;
+  margin: 0px 0px 24px 0px;
+}
+.testimonials__people {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+}
+.testimonials__photo {
+}
+.testimonials__photo img {
+  width: 72px;
+}
+.testimonials__personality {
+}
+.testimonials__name {
+  font-weight: 700;
+  line-height: 1.6;
+  color: #1e212c;
+  margin: 0px 0px 4px 0px;
+}
+.course {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #787a80;
+}
+
+@media (max-width: 935px) {
+  .testimonials__container {
+    padding: 0px 30px 30px;
+  }
+  .testimonials__header {
+    margin: 0px 0px 30px 0px;
+  }
+  .testimonials__example {
+    padding: 25px;
+  }
+}
+/* ==================== Восьмая секция === (testimonials) === Конец === 2022-11 ==================== */

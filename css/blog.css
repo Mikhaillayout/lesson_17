@@ -1,0 +1,163 @@
+/* ==================== Девятая секция === (Blog) === Начало === 2022-11 ==================== */
+.blog {
+}
+.blog__container {
+}
+.blog__top {
+  margin: 0px 0px 60px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 8px;
+}
+.blog__header {
+  flex: 1 0 auto;
+}
+.blog__button {
+}
+.blog__article {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  row-gap: 30px;
+}
+
+.article {
+}
+.article__item {
+  padding: 0 15px;
+  flex: 0 1 33.333%;
+}
+.article__body {
+}
+.article__img {
+  margin: 0px 0px 16px 0px;
+  position: relative;
+  text-align: center;
+}
+.article__img img {
+  max-width: 100%;
+}
+.article__img span {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 1px 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #424551;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.article__img .article__img_podcast::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url("../img/page1/7blog/mic.svg") 0 0 no-repeat;
+}
+.article__img .article__img_video::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url("../img/page1/7blog/Play.svg") 0 0 no-repeat;
+}
+.article__img .article__img_article::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url("../img/page1/7blog/Files.svg") 0 0 no-repeat;
+}
+.article__info {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #787a80;
+  margin: 0px 0px 8px 0px;
+}
+.article__profession {
+  font-weight: 700;
+}
+.article__separate {
+  display: flex;
+  align-items: center;
+}
+.article__separate::before {
+  content: "";
+  width: 12px;
+  height: 1px;
+  display: inline-block;
+  background-color: #787a80;
+  transform: rotate(90deg);
+}
+.calendar {
+  width: 16px;
+  height: 16px;
+  background: url("../img/page1/7blog/calendar.svg") 50% no-repeat;
+  flex: 0 0 16px;
+}
+.article__data {
+}
+.watch {
+  width: 16px;
+  height: 16px;
+  background: url("../img/page1/7blog/watch.svg") 50% no-repeat;
+  flex: 0 0 16px;
+}
+.article__time {
+}
+.article__about {
+}
+.article__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #1e212c;
+  margin: 0px 0px 8px 0px;
+}
+.article__text {
+  line-height: 1.6;
+  color: #424551;
+  margin: 0px 0px 8px 0px;
+}
+.article__listen {
+  font-weight: 700;
+  line-height: 1.6;
+  color: #1e212c;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 8px;
+}
+.article__listen::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("../img/page1/7blog/Line\ \(Stroke\).svg") 50% no-repeat;
+}
+
+@media (max-width: 935px) {
+  .article__info {
+    justify-content: center;
+    text-align: center;
+    min-width: 253px;
+  }
+  .article__item {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 650px) {
+  .blog__article {
+    justify-content: center;
+  }
+  .article__item {
+    flex: 0 1 65%;
+  }
+}
+/* ==================== Девятая секция === (Blog) === Конец === 2022-11 ==================== */
